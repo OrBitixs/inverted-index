@@ -1,0 +1,5 @@
+main\Tokenizer.class
+main\InvertedIndex.class
+main\ThreadManager.class
+main\SyncIterator.class
+main\Indexer.class
