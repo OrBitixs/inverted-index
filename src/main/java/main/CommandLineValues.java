@@ -14,6 +14,9 @@ public class CommandLineValues {
     @Option(name = "-i", aliases = { "--index-dir" }, required = true, usage = "directory to be indexed")
     private File indexedDirectory;
 
+    @Option(name = "-o", aliases = { "--output-dir" }, required = true, usage = "directory where index will be stored")
+    private File outputFile;
+
     private boolean errorFree = false;
 
     public CommandLineValues(String... args) {
@@ -21,9 +24,17 @@ public class CommandLineValues {
         try {
             parser.parseArgument(args);
 
-            if (!getIndexedDirectory().isFile()) {
-                throw new CmdLineException(parser,
-                        "--index-dir is no valid input file.");
+            if (!indexedDirectory.isDirectory()) {
+                throw new CmdLineException(parser, "-i [--index-dir] is no valid directory.");
+            }
+
+//            if (!outputFile.isDirectory()) {
+//                throw new CmdLineException(parser, "-o [--output-dir] is no valid File.");
+//            }
+
+            if (threads < 1 || threads > 16) {
+                threads = 1;
+                throw new CmdLineException(parser, "-t [--threads] must be integer 1 through 16");
             }
 
             errorFree = true;
@@ -41,5 +52,11 @@ public class CommandLineValues {
         return indexedDirectory;
     }
 
+    public File getOutputFile() {
+        return outputFile;
+    }
 
+    public int getThreads() {
+        return threads;
+    }
 }

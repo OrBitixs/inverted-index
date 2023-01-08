@@ -1,5 +1,10 @@
 main\Tokenizer.class
+main\SyncMapStorage.class
+main\Writer.class
 main\InvertedIndex.class
 main\ThreadManager.class
-main\SyncIterator.class
+main\CommandLineValues.class
 main\Indexer.class
+main\TokenMetaData$FileLinePair.class
+main\TokenMetaData.class
+main\SyncIterator.class
