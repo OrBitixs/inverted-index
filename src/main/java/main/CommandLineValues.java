@@ -28,9 +28,6 @@ public class CommandLineValues {
                 throw new CmdLineException(parser, "-i [--index-dir] is no valid directory.");
             }
 
-//            if (!outputFile.isDirectory()) {
-//                throw new CmdLineException(parser, "-o [--output-dir] is no valid File.");
-//            }
 
             if (threads < 1 || threads > 16) {
                 threads = 1;

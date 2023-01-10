@@ -1,0 +1,4 @@
+second document for testing.
+Rules are the same.
+Few new lines. Few same words.
+Hope this will do. 

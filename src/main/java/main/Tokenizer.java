@@ -52,7 +52,6 @@ public class Tokenizer {
                 }
                 if (tokens.containsKey(stringToken)) {
                     tokens.get(stringToken).addTokenMeta(fileName, streamTokenizer.lineno());
-//                System.out.println("|"+streamTokenizer.sval+"|");
                 } else {
                     tokens.put(stringToken, new TokenMetaData(fileName, streamTokenizer.lineno()));
                 }
@@ -61,10 +60,6 @@ public class Tokenizer {
             currentToken = streamTokenizer.nextToken();
         }
 
-        tokens.forEach((s, tokenMetaData) -> {
-//            System.out.println("Tokenizer::foreach::" + s);
-//            tokenMetaData.print();
-        });
         return tokens;
     }
 }

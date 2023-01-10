@@ -23,7 +23,6 @@ public class Indexer implements Runnable{
 
             File currentFile = new File(hardcodedDirectoryPath + "\\" + nextFile);
             try {
-//                currentFile.createNewFile();
                 reader = new BufferedReader(new FileReader(currentFile));
                 Tokenizer tokenizer = new Tokenizer();
                 Map<String, TokenMetaData> newMap = tokenizer.streamTokenizer(reader, nextFile);
@@ -32,11 +31,6 @@ public class Indexer implements Runnable{
                 e.printStackTrace();
             }
 
-//            try {
-//                Thread.sleep(100);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
             nextFile = syncIterator.next();
         }
     }

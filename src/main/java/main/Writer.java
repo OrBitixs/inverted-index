@@ -24,14 +24,12 @@ public class Writer {
                     try {
                         writer.append("\n["+currentFile[0]+"]\n");
                         writer.append(fileLinePair.lineNumber +" ");
-//                        System.out.println("\t|"+token+"|\t"+"\t["+currentFile[0]+"]\t"+fileLinePair.lineNumber);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 } else {
                     try {
                         writer.append(fileLinePair.lineNumber +" ");
-//                        System.out.println("\t|"+token+"|\t"+"\t["+currentFile[0]+"]\t"+fileLinePair.lineNumber);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -43,7 +41,4 @@ public class Writer {
         writer.close();
     }
 
-    private void writeLineNumbers() throws IOException {
-
-    }
 }

@@ -1,0 +1,4 @@
+Some simple text for testing.
+There was new line character.
+And againg. Now there is no new line character.
+Must be enough for simple test. 
